@@ -2,7 +2,7 @@
 <div class="vsware-Dashboard wrapper">
   <div class="sidebar" data-color="purple" data-background-color="black">
     <div class="logo">
-      <a href="#" class="simple-text">VSWare</a>
+      <a href="javascript:;" class="simple-text">VSWare</a>
     </div>
 
     <div class="sidebar-wrapper">
@@ -64,7 +64,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-          <a class="navbar-brand" href="#">{{ name }}</a>
+          <a class="navbar-brand" href="javascript:;">{{ name }}</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -75,17 +75,17 @@
 								</a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="material-icons">notifications</i>
 									<span class="notification">5</span>
 									<p class="hidden-lg hidden-md">Notifications</p>
 								</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Mike John responded to your email</a></li>
-                <li><a href="#">You have 5 new tasks</a></li>
-                <li><a href="#">You're now friend with Andrew</a></li>
-                <li><a href="#">Another Notification</a></li>
-                <li><a href="#">Another One</a></li>
+                <li><a href="javascript:;">Mike John responded to your email</a></li>
+                <li><a href="javascript:;">You have 5 new tasks</a></li>
+                <li><a href="javascript:;">You're now friend with Andrew</a></li>
+                <li><a href="javascript:;">Another Notification</a></li>
+                <li><a href="javascript:;">Another One</a></li>
               </ul>
             </li>
             <li>
@@ -507,29 +507,29 @@
         <nav class="pull-left">
           <ul>
             <li>
-              <a href="#">
+              <a href="javascript:;">
 									Home
 								</a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:;">
 									Teachers
 								</a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:;">
 									Students
 								</a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:;">
 								   Current Timetable
 								</a>
             </li>
           </ul>
         </nav>
         <p class="copyright pull-right">
-          &copy; 2017 <a href="#">VSWare</a>, made with love by the VSWare team.
+          &copy; 2017 <a href="javascript:;">VSWare</a>, made with love by the VSWare team.
         </p>
       </div>
     </footer>
