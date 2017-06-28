@@ -616,7 +616,8 @@ export default {
 
       self.seq = 0;
     },
-    setInitalValues() {},
+    setInitalValues() {
+    },
   },
   mounted() {
     this.setInitalValues();
