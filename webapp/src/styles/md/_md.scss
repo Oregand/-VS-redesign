@@ -1,0 +1,34 @@
+/* variables and mixins */
+@import "variables";
+@import "mixins";
+@import "shadows";
+
+/* plugin css */
+@import "plugins/_plugin-nouislider";
+@import "plugins/_animate";
+
+/* Core CSS */
+@import "typography";
+@import "sidebar-and-main-panel";
+@import "buttons";
+@import "misc";
+@import "inputs";
+@import "forms";
+@import "alerts";
+@import "tables";
+@import "checkboxes";
+@import "radios";
+@import "togglebutton";
+@import "ripples";
+@import "pills";
+@import "dialogs";
+@import "navbars";
+@import "popups";
+@import "footers";
+
+/* Fancy Stuff */
+@import "dropdown";
+@import "cards";
+@import "tabs";
+@import "chartist";
+@import "responsive";
