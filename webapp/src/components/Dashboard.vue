@@ -617,6 +617,7 @@ export default {
       self.seq = 0;
     },
     setInitalValues() {
+      window.$.material.init();
     },
   },
   mounted() {
