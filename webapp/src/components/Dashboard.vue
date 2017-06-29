@@ -14,7 +14,7 @@
 	                    </a>
         </li>
         <li>
-          <a href="user.html">
+          <a href="dashboard.html">
 	                        <i class="material-icons">person</i>
 	                        <p>Dashboard Teacher</p>
 	                    </a>
@@ -22,31 +22,19 @@
         <li>
           <a href="table.html">
 	                        <i class="material-icons">content_paste</i>
-	                        <p>Table List</p>
+	                        <p>Sinle Learner</p>
 	                    </a>
         </li>
         <li>
           <a href="typography.html">
 	                        <i class="material-icons">library_books</i>
-	                        <p>Typography</p>
+	                        <p>Single Faculty</p>
 	                    </a>
         </li>
         <li>
           <a href="icons.html">
 	                        <i class="material-icons">bubble_chart</i>
-	                        <p>Icons</p>
-	                    </a>
-        </li>
-        <li>
-          <a href="maps.html">
-	                        <i class="material-icons">location_on</i>
-	                        <p>Maps</p>
-	                    </a>
-        </li>
-        <li>
-          <a href="notifications.html">
-	                        <i class="material-icons text-gray">notifications</i>
-	                        <p>Notifications</p>
+	                        <p>More</p>
 	                    </a>
         </li>
       </ul>
@@ -220,12 +208,12 @@
                 <div class="ct-chart" id="completedTasksChart"></div>
               </div>
               <div class="card-content">
-                <h4 class="title">Completed Tasks</h4>
-                <p class="category">Last Campaign Performance</p>
+                <h4 class="title">Behaviour Report</h4>
+                <p class="category">Last Behaviour Performance's</p>
               </div>
               <div class="card-footer">
                 <div class="stats">
-                  <i class="material-icons">access_time</i> campaign sent 2 days ago
+                  <i class="material-icons">access_time</i> updated 2 days ago
                 </div>
               </div>
             </div>
@@ -238,24 +226,23 @@
               <div class="card-header" data-background-color="purple">
                 <div class="nav-tabs-navigation">
                   <div class="nav-tabs-wrapper">
-                    <span class="nav-tabs-title">Tasks:</span>
                     <ul class="nav nav-tabs" data-tabs="tabs">
                       <li class="active">
                         <a href="#profile" data-toggle="tab">
-														<i class="material-icons">bug_report</i>
-														Bugs
+														<i class="material-icons">message</i>
+														Messages
 													<div class="ripple-container"></div></a>
                       </li>
                       <li class="">
                         <a href="#messages" data-toggle="tab">
-														<i class="material-icons">code</i>
-														Website
+														<i class="material-icons">note</i>
+														Documents
 													<div class="ripple-container"></div></a>
                       </li>
                       <li class="">
                         <a href="#settings" data-toggle="tab">
-														<i class="material-icons">cloud</i>
-														Server
+														<i class="material-icons">report_problem</i>
+														Issues
 													<div class="ripple-container"></div></a>
                       </li>
                     </ul>
@@ -278,7 +265,7 @@
                           </td>
                           <td>Sign contract for "What are conference organizers afraid of?"</td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -296,7 +283,7 @@
                           </td>
                           <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -315,7 +302,7 @@
                           <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
                           </td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -333,7 +320,7 @@
                           </td>
                           <td>Create 4 Invisible User Experiences you Never Knew About</td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -358,7 +345,7 @@
                           <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
                           </td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -376,7 +363,7 @@
                           </td>
                           <td>Sign contract for "What are conference organizers afraid of?"</td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -400,7 +387,7 @@
                           </td>
                           <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -419,7 +406,7 @@
                           <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
                           </td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -437,7 +424,7 @@
                           </td>
                           <td>Sign contract for "What are conference organizers afraid of?"</td>
                           <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
 															</button>
                             <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -456,41 +443,41 @@
           <div class="col-lg-6 col-md-12">
             <div class="card">
               <div class="card-header" data-background-color="orange">
-                <h4 class="title">Employees Stats</h4>
-                <p class="category">New employees on 15th September, 2016</p>
+                <h4 class="title">Teacher Attendance Stats</h4>
+                <p class="category">Attendance on 18th June, 2017</p>
               </div>
               <div class="card-content table-responsive">
                 <table class="table table-hover">
                   <thead class="text-warning">
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Salary</th>
-                    <th>Country</th>
+                    <th>Display Code</th>
+                    <th>Attendance</th>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
                       <td>Dakota Rice</td>
-                      <td>$36,738</td>
-                      <td>Niger</td>
+                      <td>DR</td>
+                      <td><i class="material-icons">error_outline</i></td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Minerva Hooper</td>
-                      <td>$23,789</td>
-                      <td>Curaçao</td>
+                      <td>MH</td>
+                      <td><i class="material-icons">check</i></td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Sage Rodriguez</td>
-                      <td>$56,142</td>
-                      <td>Netherlands</td>
+                      <td>SR</td>
+                      <td><i class="material-icons">error_outline</i></td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Philip Chaney</td>
-                      <td>$38,735</td>
-                      <td>Korea, South</td>
+                      <td>PC</td>
+                      <td><i class="material-icons">check</i></td>
                     </tr>
                   </tbody>
                 </table>
@@ -533,6 +520,29 @@
       </div>
     </footer>
   </div>
+
+  <!-- Sart Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  			<div class="modal-header">
+  				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+  					<i class="material-icons">clear</i>
+  				</button>
+  				<h4 class="modal-title">Modal title</h4>
+  			</div>
+  			<div class="modal-body">
+  				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+  				</p>
+  			</div>
+  			<div class="modal-footer">
+  				<button type="button" class="btn btn-default btn-simple">Nice Button</button>
+  				<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close</button>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!--  End Modal -->
 </div>
 </template>
 
@@ -600,6 +610,7 @@ export default {
           [12, 17, 7, 17, 23, 18, 38],
         ],
       };
+
       const optionsDailySalesChart = {
         lineSmooth: Chartist.Interpolation.cardinal({
           tension: 0,
@@ -613,10 +624,65 @@ export default {
           left: 0,
         },
       };
-      const chart = document.getElementById('dailySalesChart');
-      const dailySalesChart = new Chartist.Line(chart, dataDailySalesChart, optionsDailySalesChart);
 
+      const dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
       this.startAnimationForLineChart(dailySalesChart);
+
+      const dataCompletedTasksChart = {
+        labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+        series: [
+          [230, 750, 450, 300, 280, 240, 200, 190],
+        ],
+      };
+
+      const optionsCompletedTasksChart = {
+        lineSmooth: Chartist.Interpolation.cardinal({
+          tension: 0,
+        }),
+        low: 0,
+        high: 1000,
+        chartPadding: {
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+        },
+      };
+
+      const completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
+      this.startAnimationForLineChart(completedTasksChart);
+      const dataEmailsSubscriptionChart = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        series: [
+          [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+
+        ],
+      };
+      const optionsEmailsSubscriptionChart = {
+        axisX: {
+          showGrid: false,
+        },
+        low: 0,
+        high: 1000,
+        chartPadding: {
+          top: 0,
+          right: 5,
+          bottom: 0,
+          left: 0,
+        },
+      };
+      const responsiveOptions = [
+        ['screen and (max-width: 640px)', {
+          seriesBarDistance: 5,
+          axisX: {
+            labelInterpolationFnc(value) {
+              return value[0];
+            },
+          },
+        }],
+      ];
+      const emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
+      this.startAnimationForBarChart(emailsSubscriptionChart);
     },
     startAnimationForLineChart(chart) {
       const self = this;

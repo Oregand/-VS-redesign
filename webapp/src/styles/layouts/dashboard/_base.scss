@@ -6,4 +6,10 @@
         background-color: #EEEEEE;
         color: #3C4858;
     }
+
+    .tooltip {
+        background-color: $white-color !important;
+        color: $black-color !important;
+        padding: 1em !important;
+    }
 }

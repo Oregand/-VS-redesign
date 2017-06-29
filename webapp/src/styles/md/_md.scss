@@ -7,6 +7,11 @@
 @import "plugins/_plugin-nouislider";
 @import "plugins/_animate";
 
+/* mixin css */
+@import "mixins/chartist";
+@import "mixins/transparency";
+@import "mixins/vendor-prefixes";
+
 /* Core CSS */
 @import "typography";
 @import "sidebar-and-main-panel";
