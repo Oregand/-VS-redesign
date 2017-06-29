@@ -586,6 +586,9 @@ export default {
       toggle: {},
       layer: {},
       sideBarWrapper: {},
+      sideBarNav: {},
+      mainPanelHeight: 0,
+      navbarForm: '',
     };
   },
   methods: {
@@ -687,12 +690,13 @@ export default {
           self.navContent = contentValue;
         });
 
+
         self.navContent = `<ul class="nav nav-mobile-menu">, ${self.navContent} ,</ul>`;
-        $navbar_form = $('nav').find('.navbar-form').clone(true);
-        $sidebar_nav = self.sideBarWrapper.find(' > .nav');
+        self.navbarForm = $('nav').find('.navbar-form').clone(true);
+        self.sideBarNav = self.sideBarWrapper.find(' > .nav');
         self.navContent = $(self.navContent);
-        self.navContent.insertBefore($sidebar_nav);
-        $navbar_form.insertBefore(self.navContent);
+        self.navContent.insertBefore(self.sideBarNav);
+        self.navbarForm.insertBefore(self.navContent);
 
         $('.sidebar-wrapper .dropdown .dropdown-menu > li > a').click((event) => {
           event.stopPropagation();
@@ -708,28 +712,26 @@ export default {
       }
 
       if (!toggle_initialized) {
-        $toggle = $('.navbar-toggle');
+        self.toggle = $('.navbar-toggle');
 
-        $toggle.click(() => {
-
-          if (mobile_menu_visible == 1) {
+        self.toggle.click(() => {
+          if (self.mobileMenuVisible === 1) {
             $('html').removeClass('nav-open');
-
             $('.close-layer').remove();
             setTimeout(() => {
-              $toggle.removeClass('toggled');
+              self.toggle.removeClass('toggled');
             }, 400);
 
-            mobile_menu_visible = 0;
+            self.mobileMenuVisible = 0;
           } else {
             setTimeout(() => {
-              $toggle.addClass('toggled');
+              self.toggle.addClass('toggled');
             }, 430);
 
 
-            main_panel_height = $('.main-panel')[0].scrollHeight;
+            self.mainPanelHeight = $('.main-panel')[0].scrollHeight;
             self.layer = $('<div class="close-layer"></div>');
-            self.layer.css('height', main_panel_height + 'px');
+            self.layer.css('height', self.mainPanelHeight + 'px');
             self.layer.appendTo(".main-panel");
 
             setTimeout(() => {
@@ -738,18 +740,18 @@ export default {
 
             self.layer.click(() => {
               $('html').removeClass('nav-open');
-              mobile_menu_visible = 0;
+              self.mobileMenuVisible = 0;
 
               self.layer.removeClass('visible');
 
               setTimeout(() => {
                 self.layer.remove();
-                $toggle.removeClass('toggled');
+                self.toggle.removeClass('toggled');
 
               }, 400);
             });
             $('html').addClass('nav-open');
-            mobile_menu_visible = 1;
+            self.mobileMenuVisible = 1;
           }
         });
         toggle_initialized = true;
