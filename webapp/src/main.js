@@ -2,13 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import jQuery from 'jquery';
-import material from 'bootstrap-material-design';
 import App from './App';
 import router from './router';
 
+require('bootstrap');
+
 window.$ = jQuery;
 window.jQuery = jQuery;
-window.material = material;
 
 Vue.config.productionTip = false;
 

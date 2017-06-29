@@ -539,6 +539,11 @@
 
 <script>
 import Chartist from 'chartist';
+import jQuery from 'jquery';
+import material from 'bootstrap-material-design';
+
+const $ = jQuery;
+window.material = material;
 
 export default {
   name: 'Dashboard',
@@ -601,7 +606,7 @@ export default {
             },
           });
         } else if (data.type === 'point') {
-          self.seq += 1;
+          self.seq = self.seq;
           data.element.animate({
             opacity: {
               begin: self.seq * self.delays,
@@ -617,7 +622,8 @@ export default {
       self.seq = 0;
     },
     setInitalValues() {
-      window.$.material.init();
+      $.material.init();
+      $('[rel="tooltip"]').tooltip();
     },
   },
   mounted() {
