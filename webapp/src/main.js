@@ -6,6 +6,7 @@ import App from './App';
 import router from './router';
 
 require('bootstrap');
+require('bootstrap-notify');
 
 window.$ = jQuery;
 window.jQuery = jQuery;

@@ -12,8 +12,6 @@
 	left: 0;
 	z-index: 1;
 	@include shadow-big();
-	background-color: #191919;
-	opacity: 0.95;
 
 	.sidebar-wrapper {
 		position: relative;
@@ -21,6 +19,8 @@
 		overflow: auto;
 		width: 260px;
 		z-index: 4;
+		background-color: #191919;
+		opacity: 0.95;
 	}
 
 	.logo-tim {
@@ -90,7 +90,6 @@
 		left: 0;
 		background-size: cover;
 		background-position: center center;
-		//background-image: url('/static/img/sidebar-1.jpg');
 
 		&:after {
 			position: absolute;
@@ -108,6 +107,8 @@
 		position: relative;
 		padding: $padding-base;
 		z-index: 4;
+		background-color: #191919;
+		opacity: 0.95;
 
 		&:after {
 			content: '';

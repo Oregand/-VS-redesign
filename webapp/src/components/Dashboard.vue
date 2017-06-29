@@ -1,6 +1,6 @@
 <template>
 <div class="vsware-Dashboard wrapper">
-  <div class="sidebar" data-color="purple" data-background-color="black">
+  <div class="sidebar" data-color="purple" data-background-color="black" data-image="../static/img/sidebar-1.jpg">
     <div class="logo">
       <a href="javascript:;" class="simple-text">VSWare</a>
     </div>
@@ -51,7 +51,6 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="sidebar-background"></div> -->
   </div>
 
   <div class="main-panel">
@@ -589,6 +588,8 @@ export default {
       sideBarNav: {},
       mainPanelHeight: 0,
       navbarForm: '',
+      imageSrc: '',
+      type: ['', 'info', 'success', 'warning', 'danger'],
     };
   },
   methods: {
@@ -646,6 +647,24 @@ export default {
 
       self.seq = 0;
     },
+    startAnimationForBarChart(chart) {
+      const self = this;
+      chart.on('draw', (data) => {
+        if (data.type === 'bar') {
+          self.seq2 = self.seq2;
+          data.element.animate({
+            opacity: {
+              begin: self.seq2 * self.delays2,
+              dur: self.durations2,
+              from: 0,
+              to: 1,
+              easing: 'ease',
+            },
+          });
+        }
+      });
+      self.seq2 = 0;
+    },
     setInitalValues() {
       $.material.init();
       this.sidebar = $('.sidebar');
@@ -663,6 +682,15 @@ export default {
         self.seq = 0;
         self.seq2 = 0;
       });
+    },
+    checkSidebarImage() {
+      this.sidebar = $('.sidebar');
+      this.imageSrc = this.sidebar.data('image');
+
+      if (this.imageSrc !== undefined) {
+        const sidebarContainer = `<div class="sidebar-background" style="background-image: url(${this.imageSrc}) "/>`;
+        this.sidebar.append(sidebarContainer);
+      }
     },
     initSidebarsCheck() {
       const self = this;
@@ -684,14 +712,14 @@ export default {
         self.navContent = '';
         self.mobileMenuContent = '';
 
-        self.navbar.children('ul').each(() => {
-          self.contentBuff = $(this).html();
+        self.navbar.children('ul').each((index, element) => {
+          self.contentBuff = $(element).html();
           const contentValue = self.navContent + self.contentBuff;
           self.navContent = contentValue;
         });
 
 
-        self.navContent = `<ul class="nav nav-mobile-menu">, ${self.navContent} ,</ul>`;
+        self.navContent = `<ul class="nav nav-mobile-menu">${self.navContent}</ul>`;
         self.navbarForm = $('nav').find('.navbar-form').clone(true);
         self.sideBarNav = self.sideBarWrapper.find(' > .nav');
         self.navContent = $(self.navContent);
@@ -703,15 +731,15 @@ export default {
         });
 
         self.mobileMenuInitialized = true;
+      } else if (self.mobileMenuInitialized === true && $(window).width() > 991) {
+        self.sideBarWrapper.find('.navbar-form').remove();
+        self.sideBarWrapper.find('.nav-mobile-menu').remove();
+        self.mobileMenuInitialized = false;
       } else {
-        if ($(window).width() > 991) {
-          self.sideBarWrapper.find('.navbar-form').remove();
-          self.sideBarWrapper.find('.nav-mobile-menu').remove();
-          self.mobileMenuInitialized = false;
-        }
+        return;
       }
 
-      if (!toggle_initialized) {
+      if (!self.toggleInitialized) {
         self.toggle = $('.navbar-toggle');
 
         self.toggle.click(() => {
@@ -731,8 +759,8 @@ export default {
 
             self.mainPanelHeight = $('.main-panel')[0].scrollHeight;
             self.layer = $('<div class="close-layer"></div>');
-            self.layer.css('height', self.mainPanelHeight + 'px');
-            self.layer.appendTo(".main-panel");
+            self.layer.css('height', self.mainPanelHeight);
+            self.layer.appendTo('.main-panel');
 
             setTimeout(() => {
               self.layer.addClass('visible');
@@ -747,14 +775,13 @@ export default {
               setTimeout(() => {
                 self.layer.remove();
                 self.toggle.removeClass('toggled');
-
               }, 400);
             });
             $('html').addClass('nav-open');
             self.mobileMenuVisible = 1;
           }
         });
-        toggle_initialized = true;
+        self.toggleInitialized = true;
       }
     }, 500),
     initBootstrapNavbarMenu: debounce(() => {
@@ -771,7 +798,7 @@ export default {
           self.navContent = contentValue;
         });
 
-        self.navContent = `<ul class="nav nav-mobile-menu">, ${self.navContent}, </ul>`;
+        self.navContent = `<ul class="nav nav-mobile-menu">${self.navContent}</ul>`;
 
         self.navbar.html(self.navContent);
         self.navbar.addClass('off-canvas-sidebar');
@@ -823,11 +850,40 @@ export default {
         self.bootstrapNavInitialized = true;
       }
     }, 500),
+    checkScrollForTransparentNavbar: debounce(() => {
+      const self = this;
+      if ($(document).scrollTop() > 260 && self.transparent) {
+        self.transparent = false;
+        $('.navbar-color-on-scroll').removeClass('navbar-transparent');
+      } else if ($(document).scrollTop < 260 && !self.transparent) {
+        self.transparent = true;
+        $('.navbar-color-on-scroll').addClass('navbar-transparent');
+      }
+    }, 17),
+    showNotification(from, align) {
+      const self = this;
+      const color = Math.floor((Math.random() * 4) + 1);
+
+      $.notify({
+        icon: 'notifications',
+        message: 'Welcome to <b>VSWare Secretary Dashboard</b> - made with love by David O Regan.',
+      }, {
+        type: self.type[color],
+        timer: 4000,
+        placement: {
+          from,
+          align,
+        },
+      });
+    },
   },
   mounted() {
     this.setInitalValues();
+    this.checkSidebarImage();
     this.setCharts();
     this.setWindowReSIze();
+    this.checkScrollForTransparentNavbar();
+    this.showNotification();
   },
 };
 </script>
