@@ -545,6 +545,20 @@ import material from 'bootstrap-material-design';
 const $ = jQuery;
 window.material = material;
 
+function debounce(func, wait, immediate) {
+  let timeout;
+  return () => {
+    const context = this;
+    const args = [func, wait, immediate];
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    }, wait);
+    if (immediate && !timeout) func.apply(context, args);
+  };
+}
+
 export default {
   name: 'Dashboard',
   data() {
@@ -554,16 +568,24 @@ export default {
       transparent: true,
       transparentDemo: true,
       fixedTop: false,
-      mobile_menu_visible: 0,
-      mobile_menu_initialized: false,
-      toggle_initialized: false,
-      bootstrap_nav_initialized: false,
+      mobileMenuVisible: 0,
+      mobileMenuInitialized: false,
+      toggleInitialized: false,
+      bootstrapNavInitialized: false,
       seq: 0,
       delays: 80,
       durations: 500,
       seq2: 0,
       delays2: 80,
       durations2: 500,
+      sidebar: {},
+      navbar: {},
+      navContent: '',
+      mobileMenuContent: '',
+      contentBuff: ',',
+      toggle: {},
+      layer: {},
+      sideBarWrapper: {},
     };
   },
   methods: {
@@ -623,12 +645,187 @@ export default {
     },
     setInitalValues() {
       $.material.init();
+      this.sidebar = $('.sidebar');
       $('[rel="tooltip"]').tooltip();
+      $('.form-control').on('focus', () => {
+        $(this).parent('.input-group').addClass('input-group-focus');
+      }).on('blur', () => {
+        $(this).parent('.input-group').removeClass('input-group-focus');
+      });
     },
+    setWindowReSIze() {
+      const self = this;
+      $(window).resize(() => {
+        self.initSidebarsCheck();
+        self.seq = 0;
+        self.seq2 = 0;
+      });
+    },
+    initSidebarsCheck() {
+      const self = this;
+      if ($(window).width() <= 991) {
+        if (self.sidebar.length !== 0) {
+          self.initRightMenu();
+        } else {
+          self.initBootstrapNavbarMenu();
+        }
+      }
+    },
+    initRightMenu: debounce(() => {
+      const self = this;
+      self.sideBarWrapper = $('.sidebar-wrapper');
+
+      if (!self.mobileMenuInitialized) {
+        self.navbar = $('nav').find('.navbar-collapse').first().clone(true);
+
+        self.navContent = '';
+        self.mobileMenuContent = '';
+
+        self.navbar.children('ul').each(() => {
+          self.contentBuff = $(this).html();
+          const contentValue = self.navContent + self.contentBuff;
+          self.navContent = contentValue;
+        });
+
+        self.navContent = `<ul class="nav nav-mobile-menu">, ${self.navContent} ,</ul>`;
+        $navbar_form = $('nav').find('.navbar-form').clone(true);
+        $sidebar_nav = self.sideBarWrapper.find(' > .nav');
+        self.navContent = $(self.navContent);
+        self.navContent.insertBefore($sidebar_nav);
+        $navbar_form.insertBefore(self.navContent);
+
+        $('.sidebar-wrapper .dropdown .dropdown-menu > li > a').click((event) => {
+          event.stopPropagation();
+        });
+
+        self.mobileMenuInitialized = true;
+      } else {
+        if ($(window).width() > 991) {
+          self.sideBarWrapper.find('.navbar-form').remove();
+          self.sideBarWrapper.find('.nav-mobile-menu').remove();
+          self.mobileMenuInitialized = false;
+        }
+      }
+
+      if (!toggle_initialized) {
+        $toggle = $('.navbar-toggle');
+
+        $toggle.click(() => {
+
+          if (mobile_menu_visible == 1) {
+            $('html').removeClass('nav-open');
+
+            $('.close-layer').remove();
+            setTimeout(() => {
+              $toggle.removeClass('toggled');
+            }, 400);
+
+            mobile_menu_visible = 0;
+          } else {
+            setTimeout(() => {
+              $toggle.addClass('toggled');
+            }, 430);
+
+
+            main_panel_height = $('.main-panel')[0].scrollHeight;
+            self.layer = $('<div class="close-layer"></div>');
+            self.layer.css('height', main_panel_height + 'px');
+            self.layer.appendTo(".main-panel");
+
+            setTimeout(() => {
+              self.layer.addClass('visible');
+            }, 100);
+
+            self.layer.click(() => {
+              $('html').removeClass('nav-open');
+              mobile_menu_visible = 0;
+
+              self.layer.removeClass('visible');
+
+              setTimeout(() => {
+                self.layer.remove();
+                $toggle.removeClass('toggled');
+
+              }, 400);
+            });
+            $('html').addClass('nav-open');
+            mobile_menu_visible = 1;
+          }
+        });
+        toggle_initialized = true;
+      }
+    }, 500),
+    initBootstrapNavbarMenu: debounce(() => {
+      const self = this;
+      if (!self.bootstrapNavInitialized) {
+        self.navbar = $('nav').find('.navbar-collapse').first().clone(true);
+
+        self.navContent = '';
+        self.mobileMenuContent = '';
+
+        self.navbar.children('ul').each(() => {
+          self.contentBuff = $(this).html();
+          const contentValue = self.navContent + self.contentBuff;
+          self.navContent = contentValue;
+        });
+
+        self.navContent = `<ul class="nav nav-mobile-menu">, ${self.navContent}, </ul>`;
+
+        self.navbar.html(self.navContent);
+        self.navbar.addClass('off-canvas-sidebar');
+
+        $('body').append(self.navbar);
+
+        self.toggle = $('.navbar-toggle');
+
+        self.navbar.find('a').removeClass('btn btn-round btn-default');
+        self.navbar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
+        self.navbar.find('button').addClass('btn-simple btn-block');
+
+        self.toggle.click(() => {
+          if (self.mobileMenuVisible === 1) {
+            $('html').removeClass('nav-open');
+
+            $('.close-layer').remove();
+            setTimeout(() => {
+              self.toggle.removeClass('toggled');
+            }, 400);
+
+            self.mobileMenuVisible = 0;
+          } else {
+            setTimeout(() => {
+              self.toggle.addClass('toggled');
+            }, 430);
+
+            self.layer = $('<div class="close-layer"></div>');
+            self.layer.appendTo('.wrapper-full-page');
+
+            setTimeout(() => {
+              self.layer.addClass('visible');
+            }, 100);
+
+            self.layer.click(() => {
+              $('html').removeClass('nav-open');
+              self.mobileMenuVisible = 0;
+              self.layer.removeClass('visible');
+              setTimeout(() => {
+                self.layer.remove();
+                self.toggle.removeClass('toggled');
+              }, 400);
+            });
+
+            $('html').addClass('nav-open');
+            self.mobileMenuVisible = 1;
+          }
+        });
+        self.bootstrapNavInitialized = true;
+      }
+    }, 500),
   },
   mounted() {
     this.setInitalValues();
     this.setCharts();
+    this.setWindowReSIze();
   },
 };
 </script>
