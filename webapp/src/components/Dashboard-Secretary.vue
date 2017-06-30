@@ -91,7 +91,7 @@
 
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group  is-empty">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Search" @click="uiTriggerSearch">
               <span class="material-input"></span>
             </div>
             <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -265,7 +265,7 @@
               </div>
               <div class="card-content">
                 <h4 class="title">Attendance</h4>
-                <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in attendance sales.</p>
+                <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in attendance today.</p>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -636,6 +636,101 @@
     </div>
   </div>
   <!--  End Modal -->
+
+  <!--Start Search-->
+  <div id="morphsearch" class="morphsearch">
+    <form class="morphsearch-form">
+      <input class="morphsearch-input" type="search" placeholder="Search..."/>
+      <button class="morphsearch-submit" type="submit">Search</button>
+    </form>
+    <div class="morphsearch-content">
+      <div class="dummy-column">
+        <h2>Teachers</h2>
+        <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+          <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+          <h3>Sara Soueidan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+          <img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+          <h3>Rachel Smith</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+          <img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+          <h3>Peter Finlan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+          <img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+          <h3>Patrick Cox</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/twholman">
+          <img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+          <h3>Tim Holman</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+          <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+          <h3>Shaun Dona</h3>
+        </a>
+      </div>
+      <div class="dummy-column">
+        <h2>Students</h2>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/05/page-preloading-effect/">
+          <img src="img/thumbs/PagePreloadingEffect.png" alt="PagePreloadingEffect"/>
+          <h3>Page Preloading Effect</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/">
+          <img src="img/thumbs/ArrowNavigationStyles.png" alt="ArrowNavigationStyles"/>
+          <h3>Arrow Navigation Styles</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/">
+          <img src="img/thumbs/HoverEffectsIdeasNew.png" alt="HoverEffectsIdeasNew"/>
+          <h3>Ideas for Subtle Hover Effects</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/">
+          <img src="img/thumbs/FreebieHalcyonDays.png" alt="FreebieHalcyonDays"/>
+          <h3>Halcyon Days Template</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/">
+          <img src="img/thumbs/ArticleIntroEffects.png" alt="ArticleIntroEffects"/>
+          <h3>Inspiration for Article Intro Effects</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/26/draggable-dual-view-slideshow/">
+          <img src="img/thumbs/DraggableDualViewSlideshow.png" alt="DraggableDualViewSlideshow"/>
+          <h3>Draggable Dual-View Slideshow</h3>
+        </a>
+      </div>
+      <div class="dummy-column">
+        <h2>Teaching Groups</h2>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+          <img src="img/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/>
+          <h3>Tooltip Styles Inspiration</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+          <img src="img/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/>
+          <h3>Animated Background Headers</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+          <img src="img/thumbs/OffCanvas.png" alt="OffCanvas"/>
+          <h3>Off-Canvas Menu Effects</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
+          <img src="img/thumbs/TabStyles.png" alt="TabStyles"/>
+          <h3>Tab Styles Inspiration</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+          <img src="img/thumbs/ResponsiveSVGs.png" alt="ResponsiveSVGs"/>
+          <h3>Make SVGs Responsive with CSS</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration/">
+          <img src="img/thumbs/NotificationStyles.png" alt="NotificationStyles"/>
+          <h3>Notification Styles Inspiration</h3>
+        </a>
+      </div>
+    </div>
+    <!-- /morphsearch-content -->
+    <span class="morphsearch-close" @click="uiTriggerSearch"></span>
+  </div>
+  <!-- /morphsearch -->
+  <!-- /Search -->
 </div>
 </template>
 
@@ -643,6 +738,7 @@
 import jQuery from 'jquery';
 import material from 'bootstrap-material-design';
 import Chart from 'chartjs';
+import classie from 'classie';
 
 const $ = jQuery;
 window.material = material;
@@ -689,6 +785,7 @@ export default {
       imageSrc: '',
       type: ['', 'info', 'success', 'warning', 'danger'],
       sideBarCollapse: false,
+      isOpen: false,
     };
   },
   methods: {
@@ -703,12 +800,39 @@ export default {
         $('.sidebar-wrapper').height('calc(100vh - 75px)');
       }
     },
+    uiTriggerSearch(event) {
+      const morphSearch = document.getElementById('morphsearch');
+      const input = morphSearch.querySelector('input.morphsearch-input');
+
+      if (event.type.toLowerCase() === 'focus' && this.isOpen) {
+        return false;
+      }
+
+      if (this.isOpen) {
+        classie.remove(morphSearch, 'open');
+        if (input.value !== '') {
+          setTimeout(() => {
+            classie.add(morphSearch, 'hideInput');
+            setTimeout(() => {
+              classie.remove(morphSearch, 'hideInput');
+              input.value = '';
+            }, 300);
+          }, 500);
+        }
+        input.blur();
+      } else {
+        classie.add(morphSearch, 'open');
+      }
+
+      this.isOpen = !this.isOpen;
+      return this.isOpen;
+    },
     setCharts() {
       const ctx = document.getElementById('radar-chart').getContext('2d');
       const myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: [],
           datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
@@ -742,7 +866,7 @@ export default {
         },
       });
 
-      myChart.type = 'bar';
+      myChart.labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
     },
     setInitalValues() {
       $.material.init();
