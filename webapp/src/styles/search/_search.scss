@@ -51,7 +51,7 @@
   border: none;
   background: transparent;
   font-size: 0.8em;
-  color: #ec5a62;
+  color: #ef5350;
   -webkit-transition: font-size 0.5s cubic-bezier(0.7, 0, 0.3, 1);
   transition: font-size 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 
@@ -107,7 +107,7 @@ input[type="search"] {
   overflow: hidden;
   right: 0;
   top: 50%;
-  //background: transparent url("../img/magnifier.svg") no-repeat center center;
+  background: transparent url("/static/img/ic_search_black_24px.svg") no-repeat center center;
   background-size: 100%;
   border: none;
   pointer-events: none;
@@ -337,7 +337,7 @@ input[type="search"] {
 }
 @media screen and (max-width: 60.625em) {
   .morphsearch {
-    width: 80%;
+    width: 0;
     top: 10%;
     right: 10%;
   }
