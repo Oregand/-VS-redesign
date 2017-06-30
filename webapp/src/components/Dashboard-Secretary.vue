@@ -44,11 +44,11 @@
     <nav class="navbar navbar-transparent navbar-absolute">
       <div class="container-fluid">
         <div class="navbar-minimize">
-          <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
-                            <i class="material-icons visible-on-sidebar-regular">more_vert</i>
-                            <i class="material-icons visible-on-sidebar-mini">view_list</i>
-                        <div class="ripple-container"></div>
-                </button>
+          <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon" @click="uiTriggerSideBarCollapse">
+                <i class="material-icons visible-on-sidebar-regular" v-if="sideBarCollapse === false">more_vert</i>
+                <i class="material-icons visible-on-sidebar-mini" v-if="sideBarCollapse === true">view_list</i>
+            <div class="ripple-container"></div>
+          </button>
         </div>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -179,7 +179,7 @@
                 <i class="material-icons">language</i>
               </div>
               <div class="card-content">
-                <h4 class="card-title">Global Sales by Top Locations</h4>
+                <h4 class="card-title">Global Student Exahnge(St Marys) %</h4>
                 <div class="row">
                   <div class="col-md-5">
                     <div class="table-responsive table-sales">
@@ -666,7 +666,7 @@ export default {
   name: 'Dashboard',
   data() {
     return {
-      name: 'VSWare Dashboard',
+      name: 'St Marys PLC Dashboard',
       searchVisible: 0,
       transparent: true,
       transparentDemo: true,
@@ -688,9 +688,14 @@ export default {
       navbarForm: '',
       imageSrc: '',
       type: ['', 'info', 'success', 'warning', 'danger'],
+      sideBarCollapse: false,
     };
   },
   methods: {
+    uiTriggerSideBarCollapse() {
+      this.sideBarCollapse = !this.sideBarCollapse;
+      $('body').toggleClass('sidebar-mini');
+    },
     setCharts() {
       const ctx = document.getElementById('radar-chart').getContext('2d');
       const myChart = new Chart(ctx, {
