@@ -2,14 +2,29 @@
 @import "teacher";
 
 .vsware-Dashboard {
-    &.wrapper {
-        background-color: #EEEEEE;
-        color: #3C4858;
-    }
+  &.wrapper {
+    background-color: #EEEEEE;
+    color: #3C4858;
+  }
 
-    .tooltip {
-        background-color: $white-color !important;
-        color: $black-color !important;
-        padding: 1em !important;
-    }
+  .visible-on-sidebar-regular {
+    display: inline-block !important;
+  }
+
+  .visible-on-sidebar-mini {
+    display: none !important;
+  }
+
+  .sidebar-mini .visible-on-sidebar-regular {
+    display: none !important;
+  }
+
+  .sidebar-mini .visible-on-sidebar-mini {
+    display: inline-block !important;
+  }
+
+  .navbar-minimize {
+    float: left;
+    padding: 3px 0 0 15px;
+  }
 }

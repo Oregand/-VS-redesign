@@ -7,7 +7,7 @@ import router from './router';
 
 require('bootstrap');
 require('bootstrap-notify');
-require('chartist');
+require('chartjs');
 
 window.$ = jQuery;
 window.jQuery = jQuery;
