@@ -91,7 +91,7 @@
 
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group  is-empty">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Search" @click="uiTriggerSearch">
               <span class="material-input"></span>
             </div>
             <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -309,6 +309,100 @@
       </div>
     </footer>
   </div>
+  <!--Start Search-->
+  <div id="morphsearch" class="morphsearch">
+    <form class="morphsearch-form">
+      <input class="morphsearch-input" type="search" placeholder="Search..."/>
+      <button class="morphsearch-submit" type="submit">Search</button>
+    </form>
+    <div class="morphsearch-content">
+      <div class="dummy-column">
+        <h2>Teachers</h2>
+        <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+          <img src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+          <h3>Sara Soueidan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+          <img src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+          <h3>Rachel Smith</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+          <img src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+          <h3>Peter Finlan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+          <img src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+          <h3>Patrick Cox</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/twholman">
+          <img src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+          <h3>Tim Holman</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+          <img src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+          <h3>Shaun Dona</h3>
+        </a>
+      </div>
+      <div class="dummy-column">
+        <h2>Students</h2>
+        <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+          <img src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+          <h3>Sara Soueidan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+          <img src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+          <h3>Rachel Smith</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+          <img src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+          <h3>Peter Finlan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+          <img src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+          <h3>Patrick Cox</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/twholman">
+          <img src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+          <h3>Tim Holman</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+          <img src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+          <h3>Shaun Dona</h3>
+        </a>
+      </div>
+      <div class="dummy-column">
+        <h2>Teaching Groups</h2>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+          <img src="https://previews.123rf.com/images/nejron/nejron1603/nejron160300156/53766949-Multinational-group-of-cheerful-students-taking-an-active-part-in-a-lesson-while-sitting-in-a-lectur-Stock-Photo.jpg" alt="TooltipStylesInspiration"/>
+          <h3>Irish 2</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+          <img src="https://previews.123rf.com/images/nejron/nejron1603/nejron160300156/53766949-Multinational-group-of-cheerful-students-taking-an-active-part-in-a-lesson-while-sitting-in-a-lectur-Stock-Photo.jpg" alt="AnimatedHeaderBackgrounds"/>
+          <h3>Spanish 1</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+          <img src="https://previews.123rf.com/images/nejron/nejron1603/nejron160300156/53766949-Multinational-group-of-cheerful-students-taking-an-active-part-in-a-lesson-while-sitting-in-a-lectur-Stock-Photo.jpg" alt="OffCanvas"/>
+          <h3>Maths 2(Higher Level)</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
+          <img src="https://previews.123rf.com/images/nejron/nejron1603/nejron160300156/53766949-Multinational-group-of-cheerful-students-taking-an-active-part-in-a-lesson-while-sitting-in-a-lectur-Stock-Photo.jpg" alt="TabStyles"/>
+          <h3>Geogrpahy 2(Higher Level)</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+          <img src="https://previews.123rf.com/images/nejron/nejron1603/nejron160300156/53766949-Multinational-group-of-cheerful-students-taking-an-active-part-in-a-lesson-while-sitting-in-a-lectur-Stock-Photo.jpg" alt="ResponsiveSVGs"/>
+          <h3>French(Ordinary Level)</h3>
+        </a>
+        <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration/">
+          <img src="https://previews.123rf.com/images/nejron/nejron1603/nejron160300156/53766949-Multinational-group-of-cheerful-students-taking-an-active-part-in-a-lesson-while-sitting-in-a-lectur-Stock-Photo.jpg" alt="NotificationStyles"/>
+          <h3>English 1</h3>
+        </a>
+      </div>
+    </div>
+    <!-- /morphsearch-content -->
+    <span class="morphsearch-close" @click="uiTriggerSearch"></span>
+  </div>
+  <!-- /morphsearch -->
+  <!-- /Search -->
 </div>
 </template>
 
@@ -316,6 +410,7 @@
 import jQuery from 'jquery';
 import material from 'bootstrap-material-design';
 import Chart from 'chartjs';
+import classie from 'classie';
 
 const $ = jQuery;
 window.$ = $;
@@ -346,6 +441,33 @@ export default {
       } else {
         $('.sidebar-wrapper').height('calc(100vh - 75px)');
       }
+    },
+    uiTriggerSearch(event) {
+      const morphSearch = document.getElementById('morphsearch');
+      const input = morphSearch.querySelector('input.morphsearch-input');
+
+      if (event.type.toLowerCase() === 'focus' && this.isOpen) {
+        return false;
+      }
+
+      if (this.isOpen) {
+        classie.remove(morphSearch, 'open');
+        if (input.value !== '') {
+          setTimeout(() => {
+            classie.add(morphSearch, 'hideInput');
+            setTimeout(() => {
+              classie.remove(morphSearch, 'hideInput');
+              input.value = '';
+            }, 300);
+          }, 500);
+        }
+        input.blur();
+      } else {
+        classie.add(morphSearch, 'open');
+      }
+
+      this.isOpen = !this.isOpen;
+      return this.isOpen;
     },
   },
   created() {
