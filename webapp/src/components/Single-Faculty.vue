@@ -106,145 +106,181 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-8">
-            <div class="card">
-              <div class="card-header" data-background-color="purple">
-                <h4 class="title">Personal Information</h4>
-                <p class="category">Edit your personal information here</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header" data-background-color="purple">
+                    <h4 class="title">Simple Table</h4>
+                    <p class="category">Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-content table-responsive">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Salary</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dakota Rice</td>
+                          <td>Niger</td>
+                          <td>Oud-Turnhout</td>
+                          <td class="text-primary">$36,738</td>
+                        </tr>
+                        <tr>
+                          <td>Minerva Hooper</td>
+                          <td>Curaçao</td>
+                          <td>Sinaai-Waas</td>
+                          <td class="text-primary">$23,789</td>
+                        </tr>
+                        <tr>
+                          <td>Sage Rodriguez</td>
+                          <td>Netherlands</td>
+                          <td>Baileux</td>
+                          <td class="text-primary">$56,142</td>
+                        </tr>
+                        <tr>
+                          <td>Philip Chaney</td>
+                          <td>Korea, South</td>
+                          <td>Overland Park</td>
+                          <td class="text-primary">$38,735</td>
+                        </tr>
+                        <tr>
+                          <td>Doris Greene</td>
+                          <td>Malawi</td>
+                          <td>Feldkirchen in Kärnten</td>
+                          <td class="text-primary">$63,542</td>
+                        </tr>
+                        <tr>
+                          <td>Mason Porter</td>
+                          <td>Chile</td>
+                          <td>Gloucester</td>
+                          <td class="text-primary">$78,615</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
               </div>
-              <div class="card-content">
-                <form>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group label-floating">
-                        <label>Biography</label>
-                      </div>
-                    </div>
-                    <div class="col-md-5">
-                      <div class="form-group label-floating">
-                        <label class="control-label">National ID</label>
-                        <input type="text" class="form-control" value="0710984321">
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="form-group label-floating">
-                        <label class="control-label">VSWare ID</label>
-                        <input type="text" class="form-control" value="3302844">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Student Email</label>
-                        <input type="email" class="form-control" value="BASIRU@HOTMAIL.COM">
-                      </div>
-                    </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header" data-background-color="purple">
+                    <h4 class="title">Simple Table</h4>
+                    <p class="category">Here is a subtitle for this table</p>
                   </div>
+                  <div class="card-content table-responsive">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Salary</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dakota Rice</td>
+                          <td>Niger</td>
+                          <td>Oud-Turnhout</td>
+                          <td class="text-primary">$36,738</td>
+                        </tr>
+                        <tr>
+                          <td>Minerva Hooper</td>
+                          <td>Curaçao</td>
+                          <td>Sinaai-Waas</td>
+                          <td class="text-primary">$23,789</td>
+                        </tr>
+                        <tr>
+                          <td>Sage Rodriguez</td>
+                          <td>Netherlands</td>
+                          <td>Baileux</td>
+                          <td class="text-primary">$56,142</td>
+                        </tr>
+                        <tr>
+                          <td>Philip Chaney</td>
+                          <td>Korea, South</td>
+                          <td>Overland Park</td>
+                          <td class="text-primary">$38,735</td>
+                        </tr>
+                        <tr>
+                          <td>Doris Greene</td>
+                          <td>Malawi</td>
+                          <td>Feldkirchen in Kärnten</td>
+                          <td class="text-primary">$63,542</td>
+                        </tr>
+                        <tr>
+                          <td>Mason Porter</td>
+                          <td>Chile</td>
+                          <td>Gloucester</td>
+                          <td class="text-primary">$78,615</td>
+                        </tr>
+                      </tbody>
+                    </table>
 
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Fist Name</label>
-                        <input type="text" class="form-control" value="BASIRU">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Last Name</label>
-                        <input type="text" class="form-control" value="AADLAND">
-                      </div>
-                    </div>
                   </div>
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group label-floating">
-                        <label>Address Information</label>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Adress</label>
-                        <input type="text" class="form-control" value="465 Howth Road">
-                      </div>
-                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header" data-background-color="purple">
+                    <h4 class="title">Simple Table</h4>
+                    <p class="category">Here is a subtitle for this table</p>
                   </div>
+                  <div class="card-content table-responsive">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Salary</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dakota Rice</td>
+                          <td>Niger</td>
+                          <td>Oud-Turnhout</td>
+                          <td class="text-primary">$36,738</td>
+                        </tr>
+                        <tr>
+                          <td>Minerva Hooper</td>
+                          <td>Curaçao</td>
+                          <td>Sinaai-Waas</td>
+                          <td class="text-primary">$23,789</td>
+                        </tr>
+                        <tr>
+                          <td>Sage Rodriguez</td>
+                          <td>Netherlands</td>
+                          <td>Baileux</td>
+                          <td class="text-primary">$56,142</td>
+                        </tr>
+                        <tr>
+                          <td>Philip Chaney</td>
+                          <td>Korea, South</td>
+                          <td>Overland Park</td>
+                          <td class="text-primary">$38,735</td>
+                        </tr>
+                        <tr>
+                          <td>Doris Greene</td>
+                          <td>Malawi</td>
+                          <td>Feldkirchen in Kärnten</td>
+                          <td class="text-primary">$63,542</td>
+                        </tr>
+                        <tr>
+                          <td>Mason Porter</td>
+                          <td>Chile</td>
+                          <td>Gloucester</td>
+                          <td class="text-primary">$78,615</td>
+                        </tr>
+                      </tbody>
+                    </table>
 
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">City</label>
-                        <input type="text" class="form-control" value="Killester">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Country</label>
-                        <input type="text" class="form-control" value="Dublin">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Postal Code</label>
-                        <input type="text" class="form-control" value="18">
-                      </div>
-                    </div>
                   </div>
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>School Information</label>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Current School</label>
-                        <input type="text" class="form-control" value="St Marys PLC">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Previous School</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Exam Repeat</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Misc Information</label>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Irish exemption</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">LCVP</label>
-                        <input type="text" class="form-control" value="Yes">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group label-floating">
-                        <label class="control-label">Exam Repeat</label>
-                        <input type="text" class="form-control" value="NO">
-                      </div>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                  <div class="clearfix"></div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
