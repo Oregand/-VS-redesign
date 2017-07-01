@@ -1,16 +1,8 @@
 <template>
 <div class="vsware-Dashboard wrapper">
   <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
-    <!--
-            Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-            Tip 2: you can also add an image using data-image tag
-        -->
-
     <div class="logo">
-      <a href="http://www.creative-tim.com" class="simple-text">
-                Creative Tim
-            </a>
+      <a href="javascript:;" class="simple-text">VSWare</a>
     </div>
 
     <div class="sidebar-wrapper">
@@ -51,6 +43,13 @@
   <div class="main-panel">
     <nav class="navbar navbar-transparent navbar-absolute">
       <div class="container-fluid">
+        <div class="navbar-minimize">
+          <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon" @click="uiTriggerSideBarCollapse">
+                <i class="material-icons visible-on-sidebar-regular" v-if="sideBarCollapse === false">more_vert</i>
+                <i class="material-icons visible-on-sidebar-mini" v-if="sideBarCollapse === true">view_list</i>
+            <div class="ripple-container"></div>
+          </button>
+        </div>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -164,7 +163,7 @@
                     <div class="col-md-12">
                       <div class="form-group label-floating">
                         <label class="control-label">Adress</label>
-                        <input type="text" class="form-control" value="465 Howth Road, Killester, Dublin 18">
+                        <input type="text" class="form-control" value="465 Howth Road">
                       </div>
                     </div>
                   </div>
@@ -173,19 +172,19 @@
                     <div class="col-md-4">
                       <div class="form-group label-floating">
                         <label class="control-label">City</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="Killester">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group label-floating">
                         <label class="control-label">Country</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="Dublin">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group label-floating">
                         <label class="control-label">Postal Code</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="18">
                       </div>
                     </div>
                   </div>
@@ -194,10 +193,24 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>School Information</label>
-                        <div class="form-group label-floating">
-                          <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                          <textarea class="form-control" rows="5"></textarea>
-                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Current School</label>
+                        <input type="text" class="form-control" value="St Marys PLC">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Previous School</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Exam Repeat</label>
+                        <input type="text" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -206,11 +219,25 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Language</label>
-                        <div class="form-group label-floating">
-                          <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                          <textarea class="form-control" rows="5"></textarea>
-                        </div>
+                        <label>Misc Information</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Irish exemption</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating">
+                        <label class="control-label">LCVP</label>
+                        <input type="text" class="form-control" value="Yes">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Exam Repeat</label>
+                        <input type="text" class="form-control" value="NO">
                       </div>
                     </div>
                   </div>
@@ -231,9 +258,15 @@
 
               <div class="content">
                 <h6 class="category text-gray">Student</h6>
-                <h4 class="card-title text-center">BASIRU AADLAND</h4>
+                <h4 class="card-title" style="left: 0em;">BASIRU AADLAND</h4>
                 <p class="card-content">
-                  Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  Test
+                </p>
+                <p class="card-content">
+                  Test
+                </p>
+                <p class="card-content">
+                  Test
                 </p>
                 <a href="#pablo" class="btn btn-primary btn-round"><i class="material-icons">arrow_back</i> Previous</a>
                 <a href="#pablo" class="btn btn-primary btn-round">Next <i class="material-icons">arrow_forward</i></a>
@@ -294,9 +327,30 @@ export default {
   data() {
     return {
       name: 'Single Learner',
+      sideBarCollapse: false,
     };
   },
-  methods: {},
+  methods: {
+    initPage() {
+      setTimeout(() => {
+        $.material.init();
+      }, 300);
+    },
+    uiTriggerSideBarCollapse() {
+      this.sideBarCollapse = !this.sideBarCollapse;
+      $('body').toggleClass('sidebar-mini');
+
+      if (this.sideBarCollapse) {
+        const contentHeight = $('.main-panel').height();
+        $('.sidebar-wrapper').height(contentHeight);
+      } else {
+        $('.sidebar-wrapper').height('calc(100vh - 75px)');
+      }
+    },
+  },
+  created() {
+    this.initPage();
+  },
 };
 </script>
 
