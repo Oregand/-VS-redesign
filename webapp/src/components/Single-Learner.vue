@@ -109,28 +109,33 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header" data-background-color="purple">
-                <h4 class="title">Edit Profile</h4>
-                <p class="category">Complete your profile</p>
+                <h4 class="title">Personal Information</h4>
+                <p class="category">Edit your personal information here</p>
               </div>
               <div class="card-content">
                 <form>
                   <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group label-floating">
+                        <label>Biography</label>
+                      </div>
+                    </div>
                     <div class="col-md-5">
                       <div class="form-group label-floating">
-                        <label class="control-label">Company (disabled)</label>
-                        <input type="text" class="form-control" disabled>
+                        <label class="control-label">National ID</label>
+                        <input type="text" class="form-control" value="0710984321">
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="form-group label-floating">
-                        <label class="control-label">Username</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label">VSWare ID</label>
+                        <input type="text" class="form-control" value="3302844">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group label-floating">
-                        <label class="control-label">Email address</label>
-                        <input type="email" class="form-control">
+                        <label class="control-label">Student Email</label>
+                        <input type="email" class="form-control" value="BASIRU@HOTMAIL.COM">
                       </div>
                     </div>
                   </div>
@@ -139,13 +144,13 @@
                     <div class="col-md-6">
                       <div class="form-group label-floating">
                         <label class="control-label">Fist Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="BASIRU">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group label-floating">
                         <label class="control-label">Last Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="AADLAND">
                       </div>
                     </div>
                   </div>
@@ -153,8 +158,13 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group label-floating">
+                        <label>Address Information</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group label-floating">
                         <label class="control-label">Adress</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="465 Howth Road, Killester, Dublin 18">
                       </div>
                     </div>
                   </div>
@@ -183,7 +193,20 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>About Me</label>
+                        <label>School Information</label>
+                        <div class="form-group label-floating">
+                          <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                          <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Language</label>
                         <div class="form-group label-floating">
                           <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
                           <textarea class="form-control" rows="5"></textarea>
@@ -207,12 +230,13 @@
               </div>
 
               <div class="content">
-                <h6 class="category text-gray">CEO / Co-Founder</h6>
-                <h4 class="card-title">Alec Thompson</h4>
+                <h6 class="category text-gray">Student</h6>
+                <h4 class="card-title text-center">BASIRU AADLAND</h4>
                 <p class="card-content">
                   Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                 </p>
-                <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                <a href="#pablo" class="btn btn-primary btn-round"><i class="material-icons">arrow_back</i> Previous</a>
+                <a href="#pablo" class="btn btn-primary btn-round">Next <i class="material-icons">arrow_forward</i></a>
               </div>
             </div>
           </div>
