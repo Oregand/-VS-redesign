@@ -21,13 +21,13 @@
           <li class="active">
             <router-link to="/SingleLearner">
               <i class="material-icons">content_paste</i>
-              <p>Single Learner</p>
+              <p>Learner - Personal</p>
             </router-link>
           </li>
           <li>
             <router-link to="/SingleFaculty">
               <i class="material-icons">library_books</i>
-              <p>Single Faculty</p>
+              <p>Faculty - Classes</p>
             </router-link>
           </li>
           <li>
