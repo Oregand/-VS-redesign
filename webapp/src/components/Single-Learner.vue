@@ -252,7 +252,7 @@
             <div class="card card-profile">
               <div class="card-avatar">
                 <a href="#pablo">
-                                    <img class="img" src="/static/img/faces/marc.jpg" />
+                                    <img class="img" src="/static/img/faces/drevil.jpg" />.jpg" />
                                 </a>
               </div>
 
@@ -260,13 +260,7 @@
                 <h6 class="category text-gray">Student</h6>
                 <h4 class="card-title" style="left: 0em;">BASIRU AADLAND</h4>
                 <p class="card-content">
-                  Test
-                </p>
-                <p class="card-content">
-                  Test
-                </p>
-                <p class="card-content">
-                  Test
+                  This is some information about the sutdent who may or may not look like Dr Evil.
                 </p>
                 <a href="#pablo" class="btn btn-primary btn-round"><i class="material-icons">arrow_back</i> Previous</a>
                 <a href="#pablo" class="btn btn-primary btn-round">Next <i class="material-icons">arrow_forward</i></a>

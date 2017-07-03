@@ -354,7 +354,7 @@
 																</label>
                             </div>
                           </td>
-                          <td>Sign contract for "What are conference organizers afraid of?"</td>
+                          <td>Student Bradly Cooper is absent from 2 periods.</td>
                           <td class="td-actions text-right">
                             <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
@@ -372,7 +372,7 @@
 																</label>
                             </div>
                           </td>
-                          <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                          <td>Teacher Alexandra Kalasnakov is subbing for Maths 2</td>
                           <td class="td-actions text-right">
                             <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
@@ -390,7 +390,7 @@
 																</label>
                             </div>
                           </td>
-                          <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                          <td>Mens downstairs bathroom is flooded, please use floor 2 bathrooms
                           </td>
                           <td class="td-actions text-right">
                             <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
@@ -409,7 +409,7 @@
 																</label>
                             </div>
                           </td>
-                          <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                          <td>Auguest bank holiday is Monday 27th, School will be closed all day.</td>
                           <td class="td-actions text-right">
                             <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-toggle="modal" data-target="#myModal">
 																<i class="material-icons">edit</i>
@@ -629,7 +629,7 @@
           </p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-simple">Nice Button</button>
+          <button type="button" class="btn btn-default btn-simple">Save</button>
           <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close</button>
         </div>
       </div>

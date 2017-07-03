@@ -110,53 +110,41 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header" data-background-color="purple">
-                    <h4 class="title">Simple Table</h4>
+                    <h4 class="title">Classes Taught</h4>
                     <p class="category">Here is a subtitle for this table</p>
                   </div>
                   <div class="card-content table-responsive">
                     <table class="table">
                       <thead class="text-primary">
                         <th>Name</th>
-                        <th>Country</th>
-                        <th>City</th>
-                        <th>Salary</th>
+                        <th>Class Code</th>
+                        <th>Group</th>
+                        <th>Accociated TG</th>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Dakota Rice</td>
-                          <td>Niger</td>
-                          <td>Oud-Turnhout</td>
-                          <td class="text-primary">$36,738</td>
+                          <td>Maths 2</td>
+                          <td>M2</td>
+                          <td>Group A</td>
+                          <td class="text-primary">ISTA1</td>
                         </tr>
                         <tr>
-                          <td>Minerva Hooper</td>
-                          <td>Curaçao</td>
-                          <td>Sinaai-Waas</td>
-                          <td class="text-primary">$23,789</td>
+                          <td>English</td>
+                          <td>ENG</td>
+                          <td>Group B</td>
+                          <td class="text-primary">ISTA2</td>
                         </tr>
                         <tr>
-                          <td>Sage Rodriguez</td>
-                          <td>Netherlands</td>
-                          <td>Baileux</td>
-                          <td class="text-primary">$56,142</td>
+                          <td>Irish</td>
+                          <td>IR</td>
+                          <td>Group C</td>
+                          <td class="text-primary">ISTA3</td>
                         </tr>
                         <tr>
-                          <td>Philip Chaney</td>
-                          <td>Korea, South</td>
-                          <td>Overland Park</td>
-                          <td class="text-primary">$38,735</td>
-                        </tr>
-                        <tr>
-                          <td>Doris Greene</td>
-                          <td>Malawi</td>
-                          <td>Feldkirchen in Kärnten</td>
-                          <td class="text-primary">$63,542</td>
-                        </tr>
-                        <tr>
-                          <td>Mason Porter</td>
-                          <td>Chile</td>
-                          <td>Gloucester</td>
-                          <td class="text-primary">$78,615</td>
+                          <td>English 3</td>
+                          <td>ENG3</td>
+                          <td>Group D</td>
+                          <td class="text-primary">ISTA4</td>
                         </tr>
                       </tbody>
                     </table>
@@ -169,53 +157,41 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header" data-background-color="purple">
-                    <h4 class="title">Simple Table</h4>
+                    <h4 class="title">Teaching Groups</h4>
                     <p class="category">Here is a subtitle for this table</p>
                   </div>
                   <div class="card-content table-responsive">
                     <table class="table">
                       <thead class="text-primary">
                         <th>Name</th>
-                        <th>Country</th>
-                        <th>City</th>
-                        <th>Salary</th>
+                        <th>Class Code</th>
+                        <th>Group</th>
+                        <th>Accociated TG</th>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Dakota Rice</td>
-                          <td>Niger</td>
-                          <td>Oud-Turnhout</td>
-                          <td class="text-primary">$36,738</td>
+                          <td>Maths 2</td>
+                          <td>M2</td>
+                          <td>Group A</td>
+                          <td class="text-primary">ISTA1</td>
                         </tr>
                         <tr>
-                          <td>Minerva Hooper</td>
-                          <td>Curaçao</td>
-                          <td>Sinaai-Waas</td>
-                          <td class="text-primary">$23,789</td>
+                          <td>English</td>
+                          <td>ENG</td>
+                          <td>Group B</td>
+                          <td class="text-primary">ISTA2</td>
                         </tr>
                         <tr>
-                          <td>Sage Rodriguez</td>
-                          <td>Netherlands</td>
-                          <td>Baileux</td>
-                          <td class="text-primary">$56,142</td>
+                          <td>Irish</td>
+                          <td>IR</td>
+                          <td>Group C</td>
+                          <td class="text-primary">ISTA3</td>
                         </tr>
                         <tr>
-                          <td>Philip Chaney</td>
-                          <td>Korea, South</td>
-                          <td>Overland Park</td>
-                          <td class="text-primary">$38,735</td>
-                        </tr>
-                        <tr>
-                          <td>Doris Greene</td>
-                          <td>Malawi</td>
-                          <td>Feldkirchen in Kärnten</td>
-                          <td class="text-primary">$63,542</td>
-                        </tr>
-                        <tr>
-                          <td>Mason Porter</td>
-                          <td>Chile</td>
-                          <td>Gloucester</td>
-                          <td class="text-primary">$78,615</td>
+                          <td>English 3</td>
+                          <td>ENG3</td>
+                          <td>Group D</td>
+                          <td class="text-primary">ISTA4</td>
                         </tr>
                       </tbody>
                     </table>
@@ -228,53 +204,41 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header" data-background-color="purple">
-                    <h4 class="title">Simple Table</h4>
-                    <p class="category">Here is a subtitle for this table</p>
+                    <h4 class="title">Subjects</h4>
+                    <p class="category">Subjects Taught By: </p>
                   </div>
                   <div class="card-content table-responsive">
                     <table class="table">
                       <thead class="text-primary">
                         <th>Name</th>
-                        <th>Country</th>
-                        <th>City</th>
-                        <th>Salary</th>
+                        <th>Class Code</th>
+                        <th>Group</th>
+                        <th>Accociated TG</th>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Dakota Rice</td>
-                          <td>Niger</td>
-                          <td>Oud-Turnhout</td>
-                          <td class="text-primary">$36,738</td>
+                          <td>Maths 2</td>
+                          <td>M2</td>
+                          <td>Group A</td>
+                          <td class="text-primary">ISTA1</td>
                         </tr>
                         <tr>
-                          <td>Minerva Hooper</td>
-                          <td>Curaçao</td>
-                          <td>Sinaai-Waas</td>
-                          <td class="text-primary">$23,789</td>
+                          <td>English</td>
+                          <td>ENG</td>
+                          <td>Group B</td>
+                          <td class="text-primary">ISTA2</td>
                         </tr>
                         <tr>
-                          <td>Sage Rodriguez</td>
-                          <td>Netherlands</td>
-                          <td>Baileux</td>
-                          <td class="text-primary">$56,142</td>
+                          <td>Irish</td>
+                          <td>IR</td>
+                          <td>Group C</td>
+                          <td class="text-primary">ISTA3</td>
                         </tr>
                         <tr>
-                          <td>Philip Chaney</td>
-                          <td>Korea, South</td>
-                          <td>Overland Park</td>
-                          <td class="text-primary">$38,735</td>
-                        </tr>
-                        <tr>
-                          <td>Doris Greene</td>
-                          <td>Malawi</td>
-                          <td>Feldkirchen in Kärnten</td>
-                          <td class="text-primary">$63,542</td>
-                        </tr>
-                        <tr>
-                          <td>Mason Porter</td>
-                          <td>Chile</td>
-                          <td>Gloucester</td>
-                          <td class="text-primary">$78,615</td>
+                          <td>English 3</td>
+                          <td>ENG3</td>
+                          <td>Group D</td>
+                          <td class="text-primary">ISTA4</td>
                         </tr>
                       </tbody>
                     </table>
@@ -288,21 +252,15 @@
             <div class="card card-profile">
               <div class="card-avatar">
                 <a href="#pablo">
-                                    <img class="img" src="/static/img/faces/marc.jpg" />
+                                    <img class="img" src="/static/img/faces/drevil.jpg" />
                                 </a>
               </div>
 
               <div class="content">
-                <h6 class="category text-gray">Student</h6>
+                <h6 class="category text-gray">Teacher</h6>
                 <h4 class="card-title" style="left: 0em;">BASIRU AADLAND</h4>
                 <p class="card-content">
-                  Test
-                </p>
-                <p class="card-content">
-                  Test
-                </p>
-                <p class="card-content">
-                  Test
+                  This is some information about the teacher who may or may not look like Dr Evil.
                 </p>
                 <a href="#pablo" class="btn btn-primary btn-round"><i class="material-icons">arrow_back</i> Previous</a>
                 <a href="#pablo" class="btn btn-primary btn-round">Next <i class="material-icons">arrow_forward</i></a>
