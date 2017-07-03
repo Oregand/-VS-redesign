@@ -111,12 +111,12 @@
                 <i class="material-icons">content_copy</i>
               </div>
               <div class="card-content">
-                <p class="category">Used Space</p>
-                <h3 class="title">49/50<small>GB</small></h3>
+                <p class="category">System Messages</p>
+                <h3 class="title">10<small> Messages</small></h3>
               </div>
               <div class="card-footer">
                 <div class="stats">
-                  <i class="material-icons text-danger">warning</i> <a href="#pablo">Get More Space...</a>
+                  <i class="material-icons text-primary">message</i> <a href="#pablo">View your messages here</a>
                 </div>
               </div>
             </div>
@@ -156,12 +156,12 @@
 
           <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="card card-stats">
-              <div class="card-header" data-background-color="blue">
-                <i class="fa fa-twitter"></i>
+              <div class="card-header" data-background-color="purple">
+                <i class="material-icons">build</i>
               </div>
               <div class="card-content">
-                <p class="category">Followers</p>
-                <h3 class="title">+245</h3>
+                <p class="category text-success">All Tests Passing</p>
+                <h3 class="title">459 Tests</h3>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -192,7 +192,7 @@
 
           <div class="col-md-3">
             <div class="card">
-              <div class="card-header card-chart" data-background-color="orange">
+              <div class="card-header card-chart" data-background-color="blue">
                 <canvas id="polar-chart"></canvas>
               </div>
               <div class="card-content">
@@ -227,7 +227,7 @@
 
           <div class="col-md-3">
             <div class="card">
-              <div class="card-header card-chart" data-background-color="red">
+              <div class="card-header card-chart" data-background-color="purple">
                 <canvas id="bubble-chart"></canvas>
               </div>
               <div class="card-content">
@@ -246,7 +246,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <div class="card card-nav-tabs">
-              <div class="card-header" data-background-color="purple">
+              <div class="card-header" data-background-color="blue">
                 <div class="nav-tabs-navigation">
                   <div class="nav-tabs-wrapper">
                     <ul class="nav nav-tabs" data-tabs="tabs">
