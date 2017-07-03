@@ -227,8 +227,7 @@
 
           <div class="col-md-3">
             <div class="card">
-              <div class="card-header card-chart" data-background-color="purple">
-                <canvas id="bubble-chart"></canvas>
+              <div class="card-header card-chart" data-background-color="purple" data-image="/static/img/cover.jpeg">
               </div>
               <div class="card-content">
                 <h4 class="title">Behaviour Report</h4>
