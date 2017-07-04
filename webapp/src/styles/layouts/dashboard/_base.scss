@@ -273,8 +273,8 @@ polyline {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s ease-in forwards;
-  animation-iteration-count: 10;
-  animation-direction: alternate;
+  //animation-iteration-count: 10;
+  //animation-direction: alternate;
 }
 
 @keyframes dash{
