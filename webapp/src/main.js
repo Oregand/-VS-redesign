@@ -9,8 +9,8 @@ import router from './router';
 
 require('bootstrap');
 require('bootstrap-notify');
-require('chartjs');
 require('classie');
+require('d3');
 
 window.jQuery = jQuery;
 window.$ = jQuery;
