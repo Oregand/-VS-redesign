@@ -105,7 +105,7 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="card card-stats">
               <div class="card-header" data-background-color="orange">
                 <i class="material-icons">content_copy</i>
@@ -121,7 +121,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="card card-stats">
               <div class="card-header" data-background-color="green">
                 <i class="material-icons">note</i>
@@ -137,7 +137,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="card card-stats">
               <div class="card-header" data-background-color="red">
                 <i class="material-icons">info_outline</i>
@@ -154,7 +154,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="col-lg-12 col-md-12 col-sm-6">
             <div class="card card-stats">
               <div class="card-header" data-background-color="purple">
                 <i class="material-icons">build</i>
@@ -173,69 +173,82 @@
         </div>
 
         <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-chart" data-background-color="green">
-                <canvas id="radar-chart"></canvas>
+          <div class="col-md-4">
+            <div class="card card-product" data-count="4">
+              <div class="card-image" data-header-animation="true">
+                <a href="#pablo">
+                                        <img class="img" src="https://vignette2.wikia.nocookie.net/community-sitcom/images/3/3c/CA_Dean_Peltons_shout_out_to_the_study_group.jpg/revision/latest/scale-to-width-down/640?cb=20120517195549">
+                                    </a>
+                <div class="ripple-container"></div>
               </div>
               <div class="card-content">
-                <h4 class="title">Attendance</h4>
-                <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in attendance sales.</p>
+                <h4 class="card-title">
+                                        <a href="#pablo">Class A Roll Call</a>
+                                    </h4>
+                <div class="card-description">
+                  Class A Description And Misc Information
+                </div>
               </div>
               <div class="card-footer">
-                <div class="stats">
-                  <i class="material-icons">access_time</i> updated 4 minutes ago
+                <div class="price text-danger">
+                  <h4>15/30 Students</h4>
+                </div>
+                <div class="stats pull-right">
+                  <p class="category text-danger"><i class="material-icons">error_outline</i> Absent</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-chart" data-background-color="blue">
-                <canvas id="polar-chart"></canvas>
+          <div class="col-md-4">
+            <div class="card card-product" data-count="4">
+              <div class="card-image" data-header-animation="true">
+                <a href="#pablo">
+                                        <img class="img" src="https://vignette2.wikia.nocookie.net/community-sitcom/images/3/3c/CA_Dean_Peltons_shout_out_to_the_study_group.jpg/revision/latest/scale-to-width-down/640?cb=20120517195549">
+                                    </a>
+                <div class="ripple-container"></div>
               </div>
               <div class="card-content">
-                <h4 class="title">Roll Calls</h4>
-                <p class="category">Last taken roll call</p>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <i class="material-icons">access_time</i> updated 13 minutes ago
+                <h4 class="card-title">
+                                        <a href="#pablo">Class B Roll Call</a>
+                                    </h4>
+                <div class="card-description">
+                  Class B Description And Misc Information
                 </div>
               </div>
-
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-chart" data-background-color="red">
-                <canvas id="bubble-chart"></canvas>
-              </div>
-              <div class="card-content">
-                <h4 class="title">Behaviour Report</h4>
-                <p class="category">Last Behaviour Performance's</p>
-              </div>
               <div class="card-footer">
-                <div class="stats">
-                  <i class="material-icons">access_time</i> updated 2 days ago
+                <div class="price text-success">
+                  <h4>0/30 Students</h4>
+                </div>
+                <div class="stats pull-right">
+                  <p class="category text-success"><i class="material-icons">error_outline</i> Absent</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-chart" data-background-color="purple" data-image="/static/img/cover.jpeg">
+          <div class="col-md-4">
+            <div class="card card-product" data-count="4">
+              <div class="card-image" data-header-animation="true">
+                <a href="#pablo">
+                                        <img class="img" src="https://vignette2.wikia.nocookie.net/community-sitcom/images/3/3c/CA_Dean_Peltons_shout_out_to_the_study_group.jpg/revision/latest/scale-to-width-down/640?cb=20120517195549">
+                                    </a>
+                <div class="ripple-container"></div>
               </div>
               <div class="card-content">
-                <h4 class="title">Behaviour Report</h4>
-                <p class="category">Last Behaviour Performance's</p>
+                <h4 class="card-title">
+                                        <a href="#pablo">Class C Roll Call</a>
+                                    </h4>
+                <div class="card-description">
+                  Class C Description And Misc Information
+                </div>
               </div>
               <div class="card-footer">
-                <div class="stats">
-                  <i class="material-icons">access_time</i> updated 2 days ago
+                <div class="price text-warning">
+                  <h4>6/30 Students</h4>
+                </div>
+                <div class="stats pull-right">
+                  <p class="category text-warning"><i class="material-icons">error_outline</i> Absent</p>
                 </div>
               </div>
             </div>
@@ -251,20 +264,20 @@
                     <ul class="nav nav-tabs" data-tabs="tabs">
                       <li class="active">
                         <a href="#profile" data-toggle="tab">
-														<i class="material-icons">message</i>
-														Messages
+														<i class="material-icons">date_range</i>
+														AM/PM Attendance
 													<div class="ripple-container"></div></a>
                       </li>
                       <li class="">
                         <a href="#messages" data-toggle="tab">
 														<i class="material-icons">note</i>
-														Documents
+														Assesment
 													<div class="ripple-container"></div></a>
                       </li>
                       <li class="">
                         <a href="#settings" data-toggle="tab">
 														<i class="material-icons">report_problem</i>
-														Issues
+														Behaviour Assigned To Me
 													<div class="ripple-container"></div></a>
                       </li>
                     </ul>
