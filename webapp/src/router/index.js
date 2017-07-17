@@ -4,6 +4,7 @@ import DashboardS from '@/components/Dashboard-Secretary';
 import DashboardT from '@/components/Dashboard-Teacher';
 import SingleLearner from '@/components/Single-Learner';
 import SingleFaculty from '@/components/Single-Faculty';
+import MenuLayout from '@/components/Menu-Layout';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/SingleFaculty',
       name: 'Single-Faculty',
       component: SingleFaculty,
+    },
+    {
+      path: '/MenuLayout',
+      name: 'Menu-Layout',
+      component: MenuLayout,
     },
   ],
 });
