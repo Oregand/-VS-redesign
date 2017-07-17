@@ -87,7 +87,7 @@ const menu = [
   {
     name: '2 Level Deep',
     items: [{
-      name: 'Last Level',
+      name: 'Leaf',
     },],
   },
   {
@@ -96,7 +96,7 @@ const menu = [
       name: 'Second Level',
       items: [
         {
-          name: 'Last Level',
+          name: 'Leaf',
         },
       ],
     },],
