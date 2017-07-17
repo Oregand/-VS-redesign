@@ -43,13 +43,6 @@
         }
     }
 
-    .card-title {
-        position: relative;
-        left: 2em;
-        top: 0em;
-        color: $gray-color;
-    }
-
     .category:not([class*="text-"]){
         color: $gray-color;
     }
