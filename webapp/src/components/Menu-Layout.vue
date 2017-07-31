@@ -1,5 +1,5 @@
 <template>
-<div class="sidebar"  data-image="../static/img/sidebar-1.jpg">
+<div class="sidebarmattia"  data-image="../static/img/sidebar-1.jpg">
   <div class="sidebar-background" :class="{ level1 : (level == 1),level2:(level==2),level3:(level==3)}">
     <div class="background-level level1" :style="styleFirstLevel"></div>
     <div class="background-back level1" ></div>
@@ -56,7 +56,47 @@
       </a>
     </transition-group>
   </div>
+  <div class="sidebar-search-area" :class="{ 'show-area' : searchArea.showSearchArea }">
+    <div class="sidebar-search-area-background" :class="{'show-corner' : searchArea.showCorner }"></div>
+    <a class="sidebar-search-button" @click="uiTriggerOpenSearchMode($event)"
+        @mouseover="uiTriggerShowCornerSearchArea()"
+        @mouseout="uiTriggerHideCornerSearchArea()">
+      <i class="material-icons">search</i>
+    </a>
 
+    <div class="sidebar-search-area-wrapper" v-if="searchArea.showSearchArea">
+      <div class="search-form-group">
+        <i class="material-icons">search</i>
+        <input type="text" class="form-control" placeholder="Search functionality..." v-model="searchArea.searchText">
+      </div>
+      <a class="back_to_menu" @click="uiTriggerCloseSearchMode">
+        Back to Menu
+      </a>
+      <div class="history" v-if="searchArea.searchText.length === 0">
+        <div class="history_title">history</div>
+        <ul class="nav">
+            <li v-for="menuel in navHistory" :key="menuel.name">
+              <router-link :to="menuel.routerLink">
+                <p>{{menuel.name}}</p>
+                <span v-for="(bc,index) in menuel.breadcrumbs" class="history_bc"><span v-for="n in index" class="nester_symbol">></span>{{bc}}</span>
+              </router-link>
+            </li>
+        </ul>
+      </div>
+      <div class="search-results" v-if="searchArea.searchText.length > 0">
+        <div class="results_title">search results</div>
+        <ul class="nav">
+            <li v-for="(menuel,index) in searchResults"  :key="index">
+              <router-link :to="menuel.routerLink">
+                <p>{{menuel.name}}</p>
+                <span v-for="(bc,index) in menuel.breadcrumbs" class="history_bc"><span v-for="n in index" class="nester_symbol">></span>{{bc}}</span>
+              </router-link>
+            </li>
+        </ul>
+        .
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 <script>
@@ -88,6 +128,7 @@ const menu = [
     name: '2 Level Deep',
     items: [{
       name: 'Leaf',
+      routerLink : 'bbbb'
     },],
   },
   {
@@ -97,6 +138,7 @@ const menu = [
       items: [
         {
           name: 'Leaf',
+          routerLink : 'bbbb'
         },
       ],
     },],
@@ -105,9 +147,11 @@ const menu = [
     name: 'Students',
     items: [{
       name: 'Add New Student',
+      routerLink : 'bbbb'
     },
     {
       name: 'Student Selection',
+      routerLink : 'bbbb'
     },
     {
       name: '-',
@@ -116,6 +160,7 @@ const menu = [
       name: 'Personal',
       items: [{
         name: 'Ciao',
+        routerLink : 'bbbb'
       }]
     },
     {
@@ -126,6 +171,7 @@ const menu = [
     name: 'Teacher',
     items: [{
       name: 'Add New Teacher',
+      routerLink : 'bbbb'
     },
     {
       name: '-',
@@ -162,39 +208,6 @@ const menu = [
 
   {
     name: 'Classes',
-  },
-  {
-    name: 'Students',
-    items: [{
-      name: 'Add New Student',
-    },
-    {
-      name: 'Student Selection',
-    },
-    {
-      name: '-',
-    },
-    {
-      name: 'Personal',
-    },
-    {
-      name: 'Household',
-    }],
-  },
-  {
-    name: 'Teacher',
-    items: [{
-      name: 'Add New Teacher',
-    },
-    {
-      name: '-',
-    },
-    {
-      name: 'Personal',
-    },
-    {
-      name: 'Household',
-    }],
   },
   {
     name: 'Diplomas',
@@ -266,9 +279,82 @@ export default {
       backMenuWidth: 20,
       level: 1,
       heightMenu: 0,
+      searchArea : {
+        showCorner : false,
+        showSearchArea : false,
+        searchText : ''
+      },
+      navHistory: [{
+        name: 'Leaf',
+        routerLink : 'aaa',
+        breadcrumbs : ['3 level deep','second level']
+      },{
+        name: 'Leaf',
+        routerLink : 'aaa',
+        breadcrumbs : ['2 level deep']
+      },{
+        name : 'add new student',
+        routerLink : 'aaa',
+        breadcrumbs : ['students']
+      }]
     };
   },
+  computed :{
+    searchResults(){
+      var self = this;
+      var search = this.searchArea.searchText;
+      if(search.length === 0) return [];
+      var deepFilterRecursive = function(array, search, bread, parentKey) {
+          var result = [];
+          // bread = bread || [];
+          array.forEach(function (a) {
+              var temp = [],
+                  tempBread = [],
+                  o = {},
+                  found = false;
+
+              if (a.name.toLowerCase().indexOf(search.toLowerCase()) > -1 && a.routerLink) {
+                  o.name = a.name;
+                  o.routerLink = a.routerLink;
+                  found = true;
+              }
+              if (Array.isArray(a.items)) {
+                  if(parentKey){
+                    console.log('pushing',parentKey);
+                    tempBread = (bread.length > 0)? bread.join(',').split(',') : [];
+                    tempBread.push(parentKey);
+                  }
+                  temp = deepFilterRecursive(a.items, search, tempBread ,a.name);
+                  if (temp.length) {
+                      result = result.concat(temp);
+                  }
+              }
+              if (found) {
+                  o.breadcrumbs = (bread.length > 0)? bread.join(',').split(',') : [];
+                  if(parentKey) o.breadcrumbs.push(parentKey);
+                  result.push(o);
+              }
+          });
+          return result;
+      }
+      return deepFilterRecursive(this.menu,search, []);
+    }
+  },
   methods: {
+    uiTriggerOpenSearchMode(){
+      this.searchArea.showSearchArea = true;
+      // console.log($('.search-form-group .form-control').length);
+      setTimeout(function(){$('.search-form-group .form-control').focus();},500);
+    },
+    uiTriggerCloseSearchMode(){
+      this.searchArea.showSearchArea = false;
+    },
+    uiTriggerShowCornerSearchArea(){
+      this.searchArea.showCorner = true;
+    },
+    uiTriggerHideCornerSearchArea(){
+      this.searchArea.showCorner = false;
+    },
     uiTriggerBackMenu(index) {
       if (this.level === 1) return;
       this.level = index + 1;
@@ -326,7 +412,7 @@ export default {
 
     setInitalValues() {
       // $.material.init();
-      this.sidebar = $('.sidebar');
+      this.sidebar = $('.sidebarmattia');
       const breadcrumbs = this.sidebar.find('.sidebar-breadcrumbs');
       const height = this.sidebar.height() + 1;
       breadcrumbs.width(height);
@@ -352,7 +438,7 @@ export default {
       });
     },
     checkSidebarImage() {
-      this.sidebar = $('.sidebar');
+      this.sidebar = $('.sidebarmattia');
       this.imageSrc = this.sidebar.data('image');
 
       if (this.imageSrc !== undefined) {
