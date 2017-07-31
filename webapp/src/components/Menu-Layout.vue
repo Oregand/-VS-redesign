@@ -272,13 +272,7 @@ export default {
     uiTriggerBackMenu(index) {
       if (this.level === 1) return;
       this.level = index + 1;
-      console.log(this.level,this.breadcrumbs.length);
-      // if(this.breadcrumbs.length > this.level){
-      //   while(this.breadcrumbs.length >= this.level){
-      //     this.breadcrumbs.pop();
-      //     console.log(this.breadcrumbs);
-      //   }
-      // }
+
       if (this.level === 1){
         this.breadcrumbs = [];
         this.activeMenu = $.parseJSON(JSON.stringify(this.menu));
@@ -286,32 +280,21 @@ export default {
       }
       let tempMenu = $.parseJSON(JSON.stringify(this.menu));
       this.breadcrumbs.pop();
-      $.each(this.breadcrumbs, (idx, bc) => {
-        $.each(tempMenu, (index, entry) => {
-          if (entry.name === bc) {
-            tempMenu = entry.items;
-          }
-        });
-      });
-      this.activeMenu = tempMenu;
+
+      this.activeMenu = this.breadcrumbs.map((bc) => {
+        return (tempMenu[bc] && tempMenu[bc].items) ? tempMenu[bc].items : tempMenu;
+      })
+    },
+    moveNextLevel : function(menuel){
+      let self = this;
+      self.breadcrumbs.push(menuel.name);
+      self.level++;
+      return menuel.items;
     },
     uiTriggerExpandMenu(menuel) {
       const self = this;
       let isDeep = false;
-      // eslint-disable-next-line func-name
-      $.each(self.activeMenu, (index, entry) => {
-        if (entry.name === menuel.name) {
-          if(entry.items){
-            self.activeMenu = entry.items;
-            isDeep = true;
-          }
-        }
-      });
-      if(isDeep){
-        self.breadcrumbs.push(menuel.name);
-        this.level = this.level + 1;
-      }
-
+      self.activeMenu = self.moveNextLevel(self.activeMenu.find(entry => entry.name === menuel.name && entry.items));
     },
     uiTriggerSideBarCollapse() {
       this.sideBarCollapse = !this.sideBarCollapse;
@@ -336,7 +319,6 @@ export default {
     uiTriggerScrollMenuDown(event){
       event.preventDefault();
 			var target = $(event.target).parents('.sidebar-wrapper').find('.nav');
-      console.log(target);
 			$(target).animate({
 				scrollTop : '+=100px'
 			})
