@@ -261,7 +261,10 @@ $sidebar_width : 260px;
       height: 50px;
       top : 0px;
       right : 0px;
-      transition : width .3s ease,height .3s ease;
+      // transition : width .3s ease,height .3s ease;
+      &.slowdown_closing{
+        transition : width .5s ease,height .5s ease;
+      }
       &.show-area{
         top : 0px;
         // left : 0px;
@@ -302,7 +305,7 @@ $sidebar_width : 260px;
 
       &-background{
         transition : all .3s ease;
-        // border-radius: 50%;
+        border-radius: 50%;
         background-color: $purple;
         position : absolute;
         right : -50px;
@@ -387,6 +390,7 @@ $sidebar_width : 260px;
                 }
                 p{
                   font-weight: bold;
+
                 }
               }
             }

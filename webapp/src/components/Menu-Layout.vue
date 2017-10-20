@@ -56,7 +56,7 @@
       </a>
     </transition-group>
   </div>
-  <div class="sidebar-search-area" :class="{ 'show-area' : searchArea.showSearchArea }">
+  <div class="sidebar-search-area" :class="{ 'show-area' : searchArea.showSearchArea, 'slowdown_closing' : searchArea.closing }">
     <div class="sidebar-search-area-background" :class="{'show-corner' : searchArea.showCorner }"></div>
     <a class="sidebar-search-button" @click="uiTriggerOpenSearchMode($event)"
         @mouseover="uiTriggerShowCornerSearchArea()"
@@ -282,7 +282,8 @@ export default {
       searchArea : {
         showCorner : false,
         showSearchArea : false,
-        searchText : ''
+        searchText : '',
+        closing : false
       },
       navHistory: [{
         name: 'Leaf',
@@ -347,7 +348,12 @@ export default {
       setTimeout(function(){$('.search-form-group .form-control').focus();},500);
     },
     uiTriggerCloseSearchMode(){
+      var self = this;
+      this.searchArea.closing = true;
       this.searchArea.showSearchArea = false;
+      setTimeout(function(){
+        self.searchArea.closing = false;
+      },500);
     },
     uiTriggerShowCornerSearchArea(){
       this.searchArea.showCorner = true;
